@@ -34,5 +34,5 @@ The main keybindings are:
     - Mod+L hyprlock (lock)
     - Mod+E Exit (logout)
     
-![screenshot1](https://github.com/visnudeva/dot-files/blob/main/2025-04-08 18-28-37.png)
+![screenshot1](https://github.com/visnudeva/dot-files/blob/main/screenshot.png)
 
