@@ -35,4 +35,5 @@ The main keybindings are:
     - Mod+E Exit (logout)
     
 ![screenshot1](https://github.com/visnudeva/Niri-dot-files/blob/main/screenshot.png)
+![screenshot1](https://github.com/visnudeva/Niri-dot-files/blob/main/screenshot2.png)
 
