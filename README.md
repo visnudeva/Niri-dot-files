@@ -20,6 +20,8 @@ sudo nano /etc/lightdm/slick-greeter.conf
 and change the background line for this
 /usr/share/endeavouros/backgrounds/dotdark.png
 
+To turn on the dark theme use the already installed gtk settings software
+
 Now you can logout and login on niri instead of I3.
 
 The keyboard layout is US but it can also be changed in the niri config file.
