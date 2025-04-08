@@ -3,23 +3,30 @@
 If you don't know how it works, here is how i do it to make it the easiest possible.
 
 I install EndeavourOs which is an Arch Linux based distro and choose I3 as a Window Manager, once installed i install all these
-sudo pacman -S niri kitty waybar dunst fuzzel swaybg hyprlock hypridle thunar thunar-volman gvfs nerd-fonts geany blueman
+
+`sudo pacman -S niri kitty waybar dunst fuzzel swaybg hyprlock hypridle thunar thunar-volman gvfs nerd-fonts geany blueman`
 
 As endeavourOS has disabled the bluetooth for security reasons here is how to enable it if you need it
-sudo systemctl enable bluetooth
-sudo systemctl enable --now bluetooth
+
+`sudo systemctl enable bluetooth`
+
+`sudo systemctl enable --now bluetooth`
 
 you can now dowload my .config folder, 
 then open your file manager, do CTRL+h to show the hidden files in your home folder, 
 then copy the dowloaded .config folder over the one in your home folder and overwrite if asked.
 
-If you want to use my wallpaper 
-sudo cp ~/.config/niri/dotdark.png /usr/share/endeavouros/backgrounds
+If you want to use my wallpaper
+
+`sudo cp ~/.config/niri/dotdark.png /usr/share/endeavouros/backgrounds`
 
 If you want to replace the lightdm background which is the display manager (login)
-sudo nano /etc/lightdm/slick-greeter.conf
+
+`sudo nano /etc/lightdm/slick-greeter.conf`
+
 and change the background line for this
-/usr/share/endeavouros/backgrounds/dotdark.png
+
+`background=/usr/share/endeavouros/backgrounds/dotdark.png`
 
 To turn on the dark theme use the already installed gtk settings software
 
