@@ -1,4 +1,5 @@
 **Here is my simple niri dotfiles setup.**
+
 If you don't know how it works, here is how i do it to make it the easiest possible.
 
 I install EndeavourOs which is an Arch Linux based distro and choose I3 as a Window Manager, once installed i install all these
