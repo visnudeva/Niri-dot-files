@@ -33,7 +33,10 @@ The main keybindings are:
     - Mod+F thunar (file browser)
     - Mod+L hyprlock (lock)
     - Mod+E Exit (logout)
-    
+
+
+**Here are some screenshots**
+
 ![screenshot1](https://github.com/visnudeva/Niri-dot-files/blob/main/screenshot.png)
 ![screenshot1](https://github.com/visnudeva/Niri-dot-files/blob/main/screenshot2.png)
 
