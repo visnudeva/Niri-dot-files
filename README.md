@@ -1,6 +1,11 @@
 **Here is my simple niri dotfiles setup.**
 
-If you don't know how it works, here is how i do it to make it the easiest possible or just download my script if you trust it.
+If you don't know how it works, here is how i do it to make it the easiest possible or just use my install script below.
+
+`git clone --depth=1 https://github.com/visnudeva/Niri-dot-files.git ~/Niri-dot-files
+cd ~/Niri-dot-files
+chmod +x install.sh
+./install.sh`
 
 I install EndeavourOs which is an Arch Linux based distro and choose I3 as a Window Manager, once installed i install all these
 
