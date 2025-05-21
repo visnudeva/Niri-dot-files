@@ -1,6 +1,6 @@
 **Here is my simple niri dotfiles setup.**
 
-If you don't know how it works, here is how i do it to make it the easiest possible.
+If you don't know how it works, here is how i do it to make it the easiest possible or just download my script if you trust it.
 
 I install EndeavourOs which is an Arch Linux based distro and choose I3 as a Window Manager, once installed i install all these
 
@@ -18,7 +18,7 @@ then copy the dowloaded .config folder over the one in your home folder and over
 
 If you want to use my wallpaper
 
-sudo cp ~/.config/niri/dotdark.png /usr/share/endeavouros/backgrounds
+`sudo cp ~/.config/niri/dotdark.png /usr/share/endeavouros/backgrounds`
 
 If you want to replace the lightdm background which is the display manager (login)
 
