@@ -2,7 +2,7 @@
 
 I install EndeavourOs which is an Arch Linux based distro and choose I3 as a Window Manager
 
-If you don't know how it works, here is my install script below.
+If you don't know how it works, here is my install script below to copy and paste into a terminal.
 
 <pre>git clone --depth=1 https://github.com/visnudeva/Niri-dot-files.git ~/Niri-dot-files
 cd ~/Niri-dot-files
