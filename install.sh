@@ -5,7 +5,9 @@ set -e  # Exit on error
 # --- Configuration ---
 CLONE_DIR="$HOME/Niri-dot-files"
 CONFIG_TARGET="$HOME/.config"
-WALLPAPER_SOURCE="$CONFIG_TARGET/niri/dotdark.png"
+NIRI_SOURCE="$CLONE_DIR/.config/niri"
+NIRI_DEST="$HOME/niri"
+WALLPAPER_SOURCE="$NIRI_DEST/dotdark.png"
 WALLPAPER_DEST="/usr/share/endeavouros/backgrounds"
 PACKAGES=(yay niri kitty waybar dunst fuzzel swaybg hyprlock hypridle thunar thunar-volman gvfs geany blueman)
 AUR_PACKAGES=(ttf-nerd-fonts-symbols)
@@ -22,11 +24,19 @@ else
     echo "[!] 'yay' not found. Skipping AUR package installation: ${AUR_PACKAGES[*]}"
 fi
 
-# --- Copy dotfiles to ~/.config ---
-echo "[+] Copying dotfiles from $CLONE_DIR/.config/ to $CONFIG_TARGET/..."
-rsync -avh --exclude='.git' "$CLONE_DIR/.config/" "$CONFIG_TARGET/"
+# --- Copy all dotfiles to ~/.config EXCEPT niri ---
+echo "[+] Copying dotfiles to ~/.config/ (excluding 'niri')..."
+rsync -avh --exclude='.git' --exclude='niri' "$CLONE_DIR/.config/" "$CONFIG_TARGET/"
 
-# --- Set wallpaper ---
+# --- Copy 'niri' config to ~/niri ---
+if [[ -d "$NIRI_SOURCE" ]]; then
+    echo "[+] Copying 'niri' config to $NIRI_DEST..."
+    rsync -avh "$NIRI_SOURCE/" "$NIRI_DEST/"
+else
+    echo "[!] Niri config not found at $NIRI_SOURCE. Skipping."
+fi
+
+# --- Copy wallpaper ---
 if [[ -f "$WALLPAPER_SOURCE" ]]; then
     echo "[+] Copying wallpaper to $WALLPAPER_DEST..."
     sudo mkdir -p "$WALLPAPER_DEST"
