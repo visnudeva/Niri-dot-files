@@ -16,9 +16,9 @@ you can now dowload my .config folder,
 then open your file manager, do CTRL+h to show the hidden files in your home folder, 
 then copy the dowloaded .config folder over the one in your home folder and overwrite if asked.
 
-If you want to use my wallpaper download the dotdark.png, then do:
+If you want to use my wallpaper
 
-`sudo cp ~/Downloads/dotdark.png /usr/share/endeavouros/backgrounds`
+sudo cp ~/.config/niri/dotdark.png /usr/share/endeavouros/backgrounds
 
 If you want to replace the lightdm background which is the display manager (login)
 
