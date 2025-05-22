@@ -1,4 +1,4 @@
-**Here is my simple and clean niri dotfiles setup for Arch linux based distros.**
+**Here is my simple and clean Niri dotfiles setup for Arch linux based distros.**
 
 Here is my install script.
 
@@ -7,7 +7,7 @@ cd ~/Niri-dot-files
 chmod +x install.sh
 ./install.sh</pre>
 
-The keyboard layout is US but it can also be changed in the niri config file.
+The keyboard layout is US but it can also be changed in the Niri config file.
 
 The main keybindings are:
      
