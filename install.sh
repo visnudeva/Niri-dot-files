@@ -6,7 +6,9 @@ set -e  # Exit on error
 CLONE_DIR="$HOME/Niri-dot-files"
 CONFIG_TARGET="$HOME/.config"
 NIRI_SOURCE="$CLONE_DIR/.config/niri"
+FUZZEL_SOURCE="$CLONE_DIR/.config/fuzzel"
 NIRI_DEST="$HOME/niri"
+FUZZEL_DEST="$HOME/fuzzel"
 WALLPAPER_SOURCE="$NIRI_DEST/dotdark.png"
 WALLPAPER_DEST="/usr/share/endeavouros/backgrounds"
 PACKAGES=(yay niri kitty waybar dunst fuzzel swaybg hyprlock hypridle thunar thunar-volman gvfs geany blueman)
@@ -24,9 +26,9 @@ else
     echo "[!] 'yay' not found. Skipping AUR package installation: ${AUR_PACKAGES[*]}"
 fi
 
-# --- Copy all dotfiles to ~/.config EXCEPT niri ---
-echo "[+] Copying dotfiles to ~/.config/ (excluding 'niri')..."
-rsync -avh --exclude='.git' --exclude='niri' "$CLONE_DIR/.config/" "$CONFIG_TARGET/"
+# --- Copy all dotfiles to ~/.config EXCEPT 'niri' and 'fuzzel' ---
+echo "[+] Copying dotfiles to ~/.config/ (excluding 'niri' and 'fuzzel')..."
+rsync -avh --exclude='.git' --exclude='niri' --exclude='fuzzel' "$CLONE_DIR/.config/" "$CONFIG_TARGET/"
 
 # --- Copy 'niri' config to ~/niri ---
 if [[ -d "$NIRI_SOURCE" ]]; then
@@ -34,6 +36,14 @@ if [[ -d "$NIRI_SOURCE" ]]; then
     rsync -avh "$NIRI_SOURCE/" "$NIRI_DEST/"
 else
     echo "[!] Niri config not found at $NIRI_SOURCE. Skipping."
+fi
+
+# --- Copy 'fuzzel' config to ~/fuzzel ---
+if [[ -d "$FUZZEL_SOURCE" ]]; then
+    echo "[+] Copying 'fuzzel' config to $FUZZEL_DEST..."
+    rsync -avh "$FUZZEL_SOURCE/" "$FUZZEL_DEST/"
+else
+    echo "[!] Fuzzel config not found at $FUZZEL_SOURCE. Skipping."
 fi
 
 # --- Copy wallpaper ---
