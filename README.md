@@ -1,8 +1,6 @@
-**Here is my simple niri dotfiles setup.**
+**Here is my simple and clean niri dotfiles setup for Arch linux based distros.**
 
-I install EndeavourOs which is an Arch Linux based distro and choose I3 as a Window Manager
-
-If you don't know how it works, here is my install script below to copy and paste into a terminal.
+Here is my install script below to copy and paste into a terminal.
 
 <pre>git clone --depth=1 https://github.com/visnudeva/Niri-dot-files.git ~/Niri-dot-files
 cd ~/Niri-dot-files
