@@ -56,5 +56,32 @@ else
     echo "[!] Wallpaper not found at $WALLPAPER_SOURCE. Skipping wallpaper setup."
 fi
 
-# --- Final message ---
+# --- message ---
 echo "[✔] Dotfiles and packages installed successfully!"
+
+# --- Set SDDM and LightDM background from Hypr config image ---
+LOGIN_WALL="$HOME/.config/hypr/burreddot.png"
+
+# Set background for SDDM (if installed)
+if command -v sddm &>/dev/null; then
+    echo "[+] Setting SDDM background..."
+    SDDM_THEME_DIR="/usr/share/sddm/themes"
+    THEME_CONF=$(find "$SDDM_THEME_DIR" -name theme.conf 2>/dev/null | head -n 1)
+    if [[ -f "$THEME_CONF" ]]; then
+        sudo sed -i "s|^Background=.*|Background=$LOGIN_WALL|" "$THEME_CONF" || echo "Background=$LOGIN_WALL" | sudo tee -a "$THEME_CONF"
+        echo "[✔] SDDM background set to $LOGIN_WALL"
+    else
+        echo "[!] Could not find SDDM theme.conf. Background not set."
+    fi
+fi
+
+# Set background for LightDM GTK greeter (if installed)
+if command -v lightdm &>/dev/null && [[ -f /etc/lightdm/lightdm-gtk-greeter.conf ]]; then
+    echo "[+] Setting LightDM GTK greeter background..."
+    sudo sed -i "s|^background=.*|background=$LOGIN_WALL|" /etc/lightdm/lightdm-gtk-greeter.conf || echo "background=$LOGIN_WALL" | sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf
+    echo "[✔] LightDM background set to $LOGIN_WALL"
+fi
+
+# --- Final message ---
+echo -e "\n All done! Your Arch/Niri setup is now rocking with fresh dotfiles, packages, and a slick login screen. Enjoy the smooth vibes! \n"
+
