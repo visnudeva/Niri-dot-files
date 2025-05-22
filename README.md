@@ -7,10 +7,6 @@ cd ~/Niri-dot-files
 chmod +x install.sh
 ./install.sh</pre>
 
-To turn on the dark theme use the already installed gtk settings software
-
-Now you can logout and login on Niri.
-
 The keyboard layout is US but it can also be changed in the niri config file.
 
 The main keybindings are:
