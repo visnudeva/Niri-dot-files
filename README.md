@@ -1,41 +1,15 @@
 **Here is my simple and clean niri dotfiles setup for Arch linux based distros.**
 
-Here is my install script below to copy and paste into a terminal.
+Here is my install script.
 
 <pre>git clone --depth=1 https://github.com/visnudeva/Niri-dot-files.git ~/Niri-dot-files
 cd ~/Niri-dot-files
 chmod +x install.sh
 ./install.sh</pre>
 
-Or if you want to do it manually, here are the steps:
-
-`sudo pacman -S niri kitty waybar dunst fuzzel swaybg hyprlock hypridle thunar thunar-volman gvfs nerd-fonts geany blueman`
-
-As endeavourOS has disabled the bluetooth for security reasons here is how to enable it if you need it
-
-`sudo systemctl enable bluetooth`
-
-`sudo systemctl enable --now bluetooth`
-
-you can now dowload my .config folder, 
-then open your file manager, do CTRL+h to show the hidden files in your home folder, 
-then copy the dowloaded .config folder over the one in your home folder and overwrite if asked.
-
-If you want to use my wallpaper
-
-`sudo cp ~/.config/niri/dotdark.png /usr/share/endeavouros/backgrounds`
-
-If you want to replace the lightdm background which is the display manager (login)
-
-`sudo nano /etc/lightdm/slick-greeter.conf`
-
-and change the background line for this
-
-`background=/usr/share/endeavouros/backgrounds/dotdark.png`
-
 To turn on the dark theme use the already installed gtk settings software
 
-Now you can logout and login on niri instead of I3.
+Now you can logout and login on Niri.
 
 The keyboard layout is US but it can also be changed in the niri config file.
 
