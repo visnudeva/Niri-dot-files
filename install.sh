@@ -12,7 +12,7 @@ FUZZEL_DEST="$HOME/fuzzel"
 WALLPAPER_SOURCE="$NIRI_DEST/dotdark.png"
 WALLPAPER_DEST="/usr/share/endeavouros/backgrounds"
 PACKAGES=(yay niri kitty waybar dunst fuzzel swaybg hyprlock hypridle thunar thunar-volman gvfs geany blueman nwg-look)
-AUR_PACKAGES=(ttf-nerd-fonts-symbols)
+AUR_PACKAGES=(ttf-nerd-fonts-symbols tofi)
 
 # --- Install necessary packages ---
 echo "[+] Installing packages with pacman..."
