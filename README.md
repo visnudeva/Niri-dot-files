@@ -11,11 +11,11 @@ The keyboard layout is US but it can also be changed in the Niri config file.
 
 The main keybindings are:
      
-    - Mod+T alacritty (terminal)
+    - Mod+T kitty (terminal)
     - Mod+I geany (IDE)
-    - Mod+M fuzzel (launcher)
-    - Mod+W firefox (web browser)
-    - Mod+F dolphin (file browser)
+    - Mod+SPACE fuzzel (launcher)
+    - Mod+B firefox (web browser)
+    - Mod+N nautilus (file browser)
     - Mod+L swaylock (lock)
     - Mod+E Exit (logout)
 
