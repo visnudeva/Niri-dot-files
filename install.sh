@@ -11,7 +11,8 @@ NIRI_DEST="$HOME/niri"
 FUZZEL_DEST="$HOME/fuzzel"
 WALLPAPER_SOURCE="$NIRI_DEST/dotdark.png"
 WALLPAPER_DEST="/usr/share/endeavouros/backgrounds"
-PACKAGES=(yay niri kitty waybar dunst fuzzel swaybg hyprlock hypridle thunar thunar-volman gvfs geany blueman nwg-look)
+PACKAGES=(yay niri waybar fuzzel swaybg swaylock swayridle thunar thunar-volman gvfs geany blueman nwg-look mako alacritty
+xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring nautilus)
 AUR_PACKAGES=(ttf-nerd-fonts-symbols)
 
 # --- Install necessary packages ---
