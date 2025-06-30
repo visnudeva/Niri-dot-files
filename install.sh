@@ -59,38 +59,6 @@ fi
 # --- message ---
 echo "[✔] Dotfiles and packages installed successfully!"
 
-echo "[+] Installing Catppuccin Mocha theme..."
-
-# Variables
-CAT_THEME_REPO="https://github.com/catppuccin/gtk.git"
-CAT_ICONS_REPO="https://github.com/catppuccin/icons.git"
-TMP_DIR=$(mktemp -d)
-
-# Clone Catppuccin GTK theme and icons
-git clone --depth=1 "$CAT_THEME_REPO" "$TMP_DIR/gtk"
-git clone --depth=1 "$CAT_ICONS_REPO" "$TMP_DIR/icons"
-
-# Create themes and icons directories if not exist
-mkdir -p "$HOME/.themes" "$HOME/.icons"
-
-# Copy the mocha GTK theme
-cp -r "$TMP_DIR/gtk/src/mocha" "$HOME/.themes/"
-
-# Copy the mocha icons
-cp -r "$TMP_DIR/icons/Catppuccin-Mocha" "$HOME/.icons/"
-
-# Clean up
-rm -rf "$TMP_DIR"
-
-# Apply the Catppuccin Mocha theme using gsettings
-echo "[+] Applying Catppuccin Mocha theme via gsettings..."
-
-gsettings set org.gnome.desktop.interface gtk-theme "mocha"
-gsettings set org.gnome.desktop.interface icon-theme "Catppuccin-Mocha"
-gsettings set org.gnome.desktop.wm.preferences theme "mocha"
-
-echo "[✔] Catppuccin Mocha theme installed and applied!"
-
 # --- Set SDDM and LightDM background from Hypr config image ---
 LOGIN_WALL="$HOME/.config/hypr/burreddot.png"
 
@@ -116,4 +84,3 @@ fi
 
 # --- Final message ---
 echo -e "\n All done! Your Arch/Niri setup is now rocking with fresh dotfiles, packages, and a slick login screen. Enjoy the smooth vibes! \n"
-
