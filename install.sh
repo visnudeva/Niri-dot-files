@@ -13,7 +13,7 @@ WALLPAPER_SOURCE="$NIRI_DEST/dotdark.png"
 WALLPAPER_DEST="/usr/share/endeavouros/backgrounds"
 PACKAGES=(yay niri waybar fuzzel swaybg swayidle gvfs geany blueman nwg-look mako alacritty
 xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring nautilus)
-AUR_PACKAGES=(ttf-nerd-fonts-symbols swaylock-effects)
+AUR_PACKAGES=(ttf-nerd-fonts-symbols swaylock-effects qogir-cursor-theme qogir-icon-theme qogir-gtk-theme)
 
 # --- Install necessary packages ---
 echo "[+] Installing packages with pacman..."
