@@ -11,7 +11,7 @@ NIRI_DEST="$HOME/niri"
 FUZZEL_DEST="$HOME/fuzzel"
 WALLPAPER_SOURCE="$NIRI_DEST/dotdark.png"
 WALLPAPER_DEST="/usr/share/endeavouros/backgrounds"
-PACKAGES=(yay niri waybar fuzzel swaybg swayidle gvfs geany blueman nwg-look mako alacritty
+PACKAGES=(yay niri waybar fuzzel swaybg swayidle gvfs geany blueman nwg-look mako kitty
 xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring nautilus)
 AUR_PACKAGES=(ttf-nerd-fonts-symbols swaylock-effects qogir-cursor-theme qogir-icon-theme qogir-gtk-theme)
 
