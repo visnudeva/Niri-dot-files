@@ -16,7 +16,6 @@ The main keybindings are:
     - Mod+SPACE fuzzel (launcher)
     - Mod+B firefox (web browser)
     - Mod+N nautilus (file browser)
-    - Mod+L swaylock (lock)
     - Mod+E Exit (logout)
 
 
